@@ -1,4 +1,4 @@
-import { Divider, Flex, Layout, Slider, Typography } from 'antd'
+import { Flex, Layout, Slider, Typography } from 'antd'
 import React from 'react'
 
 const PortfolioHeader = () => {
@@ -7,7 +7,7 @@ const PortfolioHeader = () => {
         <Layout style={{width : '100%'}}>
             <Typography.Title level={3}>{`Portfolio Tracker`}</Typography.Title>
         </Layout>
-        <Layout style={{width : '200px', border: '1px solid black', borderRadius : '4px'}}>
+        <Layout style={{width : '200px', border: '2px solid #91caff', borderRadius : '4px'}}>
             <Slider 
             range={{
                 draggableTrack: true,
