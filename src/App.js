@@ -11,7 +11,7 @@ function App() {
       <Header />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={ <HomePage/> } />
+          <Route path="/:id?" element={ <HomePage/> } />
           <Route path='/login' element = { <LoginPage /> } />
         </Routes>
       </BrowserRouter>
