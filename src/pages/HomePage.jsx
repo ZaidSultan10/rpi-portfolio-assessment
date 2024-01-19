@@ -1,6 +1,8 @@
 import React from 'react'
 import { Divider, Layout } from 'antd'
 import PortfolioHeader from '../components/PortfolioHeader'
+import Typography from 'antd/es/typography/Typography'
+import PriceChart from '../components/PriceChart'
 
 const HomePage = () => {
   return (
@@ -11,7 +13,8 @@ const HomePage = () => {
                 <Divider />
             </Layout>
             <Layout>
-                graphs
+                <Typography.Paragraph>Price</Typography.Paragraph>
+                <PriceChart />
             </Layout>
             <Layout>
                 news
