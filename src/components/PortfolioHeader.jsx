@@ -7,7 +7,7 @@ const PortfolioHeader = () => {
         <Layout style={{width : '100%'}}>
             <Typography.Title level={3}>{`Portfolio Tracker`}</Typography.Title>
         </Layout>
-        <Layout style={{width : '200px', border: '2px solid #91caff', borderRadius : '4px'}}>
+        <Layout style={{width : '200px', border: '2px solid #ed1b2f', borderRadius : '8px'}}>
             <Slider 
             range={{
                 draggableTrack: true,
