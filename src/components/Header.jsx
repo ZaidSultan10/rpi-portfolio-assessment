@@ -1,26 +1,18 @@
 import React from 'react'
 import { Menu, Icon } from 'antd';
-import {  Link } from 'react-router-dom';
+import {  Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
+    let userData = localStorage.getItem('userData') && JSON.parse(localStorage.getItem('userData'))?.userData
+
   return (
     <section>
         <Menu mode="horizontal">
             <Menu.Item key="mail">
-                <a href="">Home</a>
+                <a href={userData && userData.navigation ? userData.navigation : '/'}>Home</a>
             </Menu.Item>
-            <Menu.SubMenu title={<span>Blogs</span>}>
-                <Menu.ItemGroup title="Item 1">
-                    <Menu.Item key="setting:1">Option 1</Menu.Item>
-                    <Menu.Item key="setting:2">Option 2</Menu.Item>
-                </Menu.ItemGroup>
-                <Menu.ItemGroup title="Item 2">
-                    <Menu.Item key="setting:3">Option 3</Menu.Item>
-                    <Menu.Item key="setting:4">Option 4</Menu.Item>
-                </Menu.ItemGroup>
-            </Menu.SubMenu>
             <Menu.Item key="alipay">
-            <a href="">Contact Us</a>
+                <a href="/login">{userData && userData.username ? `Welcome ${userData.username} (Logout)` : `Login`}</a>
             </Menu.Item>
         </Menu>
     </section>

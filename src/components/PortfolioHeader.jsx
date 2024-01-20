@@ -1,5 +1,7 @@
 import { Flex, Layout, Slider, Typography } from 'antd'
 import React from 'react'
+import { data } from '../data'
+import moment from 'moment'
 
 const PortfolioHeader = () => {
   return (
@@ -12,7 +14,7 @@ const PortfolioHeader = () => {
             range={{
                 draggableTrack: true,
             }}
-            defaultValue={[20, 50]} />
+            defaultValue={[moment(data[0].data[0].x).valueOf(),moment(data[data.length - 1].data[data.length - 1].x).valueOf()]} />
         </Layout>
     </Flex>
   )
